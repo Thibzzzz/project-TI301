@@ -15,7 +15,7 @@ int main() {
 //#else
 //    map = createMapFromFile("../maps/example1.map");
 //#endif
-    startTimer();
+    
     printf("Map created with dimensions %d x %d\n", map.y_max, map.x_max);
     for (int i = 0; i < map.y_max; i++)
     {
@@ -35,6 +35,7 @@ int main() {
         printf("\n");
     }
     displayMap(map);
+    startTimer();
     t_localisation marc = loc_init(3, 4, WEST);
     if(isValidLocalisation(marc.pos, map.x_max, map.y_max)){
         while (map.costs[marc.pos.x][marc.pos.y] != 0){
